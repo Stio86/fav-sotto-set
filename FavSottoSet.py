@@ -65,9 +65,9 @@ def check_diretta():
             match_key = f"{favorito} vs {avversario}"
 
             if ha_perso_set and match_key not in sent_alerts:
-                msg = f"🎾 [{league}]
-Il favorito {favorito} ha perso il 1° set contro {avversario}.
-Quote live: {favorito} @{quota_fav:.2f} vs {avversario} @{sfav:.2f}"
+                msg = f"   [{league}]
+                           Il favorito {favorito} ha perso il 1° set contro {avversario}.
+                           Quote live: {favorito} @{quota_fav:.2f} vs {avversario} @{sfav:.2f}"
                 send_telegram_message(msg)
                 sent_alerts.add(match_key)
 
