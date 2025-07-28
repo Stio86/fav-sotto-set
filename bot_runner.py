@@ -97,8 +97,7 @@ async def scrape():
 
                         try:
                             live = await new_page.inner_text("div.detailScore__wrapper.detailScore__live")
-                            score = live.replace("
-", "").replace(" ", "")
+                            score = live.replace(" ", "").replace(" ", "")
                         except:
                             score = "N/A"
 
@@ -107,15 +106,10 @@ async def scrape():
                             perdente = g1 if fav == g1 and score == "0-1" else g2 if fav == g2 and score == "1-0" else None
                             if perdente == fav:
                                 msg = (
-                                    f"🚨 FAVORITO IN DIFFICOLTÀ
-
-"
-                                    f"👤 Match: {g1} vs {g2}
-"
-                                    f"🎯 Favorito: {fav} (quota {qfav})
-"
-                                    f"🟠 Sta perdendo il 1º set ({score})
-"
+                                    f"🚨 FAVORITO IN DIFFICOLTÀ"
+                                    f"👤 Match: {g1} vs {g2}"
+                                    f"🎯 Favorito: {fav} (quota {qfav})"
+                                    f"🟠 Sta perdendo il 1º set ({score})"
                                     f"🔗 {match_url}"
                                 )
                                 send_telegram_message(msg)
