@@ -9,4 +9,8 @@ def home():
     return "✅ Bot eseguito"
 
 if __name__ == "__main__":
-    app.run(debug=False, port=10000, host="0.0.0.0")
+    import os
+
+    port = int(os.environ.get("PORT", 5000))  # Render assegna dinamicamente la porta in PORT
+    app.run(host="0.0.0.0", port=port)
+
