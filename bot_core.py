@@ -102,28 +102,25 @@ def analizza_partite():
             continue
 
         try:
-            live_score = driver.find_element(
-                By.CSS_SELECTOR, "div.detailScore__wrapper.detailScore__live"
-            ).text.strip().replace("
-", "").replace(" ", "")
+            live_score = driver.find_element(By.CSS_SELECTOR, "div.detailScore__wrapper.detailScore__live").text.strip().replace(" ", "").replace(" ", "")
         except:
             live_score = "N/A"
 
         if live_score == "0-1" and fav == g1:
             msg = f"⚠️ *FAVORITO SOTTO 0-1!*
 
-🏆 {tipo} - {nome_t}
-👤 {g1} vs {g2}
-📉 Favorito: {fav} @ {qfav:.2f}
-🔗 {link}"
+                    🏆 {tipo} - {nome_t}
+                    👤 {g1} vs {g2}
+                    📉 Favorito: {fav} @ {qfav:.2f}
+                    🔗 {link}"
             invia_messaggio(msg)
         elif live_score == "1-0" and fav == g2:
             msg = f"⚠️ *FAVORITO SOTTO 0-1!*
 
-🏆 {tipo} - {nome_t}
-👤 {g1} vs {g2}
-📉 Favorito: {fav} @ {qfav:.2f}
-🔗 {link}"
+                    🏆 {tipo} - {nome_t}
+                    👤 {g1} vs {g2}
+                    📉 Favorito: {fav} @ {qfav:.2f}
+                    🔗 {link}"
             invia_messaggio(msg)
 
         driver.close()
