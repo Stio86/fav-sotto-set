@@ -1,4 +1,4 @@
-selenium
+Flask
+undetected-chromedriver
 requests
-flask
-webdriver-manager
+selenium
