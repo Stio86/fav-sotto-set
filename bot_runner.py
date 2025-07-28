@@ -113,8 +113,7 @@ def run_bot():
 
         try:
             div = driver.find_element(By.CSS_SELECTOR, "div.detailScore__wrapper.detailScore__live")
-            live_score = div.text.strip().replace("
-", "").replace(" ", "")
+            live_score = div.text.strip().replace(" ", "").replace(" ", "")
         except:
             live_score = "N/A"
 
