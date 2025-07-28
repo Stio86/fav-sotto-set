@@ -107,20 +107,20 @@ def analizza_partite():
             live_score = "N/A"
 
         if live_score == "0-1" and fav == g1:
-            msg = f"⚠️ *FAVORITO SOTTO 0-1!*
+            msg = (f"""⚠️ *FAVORITO SOTTO 0-1!*
 
                     🏆 {tipo} - {nome_t}
                     👤 {g1} vs {g2}
                     📉 Favorito: {fav} @ {qfav:.2f}
-                    🔗 {link}"
+                    🔗 {link}""")
             invia_messaggio(msg)
         elif live_score == "1-0" and fav == g2:
-            msg = f"⚠️ *FAVORITO SOTTO 0-1!*
+            msg = (f"""⚠️ *FAVORITO SOTTO 0-1!*
 
                     🏆 {tipo} - {nome_t}
                     👤 {g1} vs {g2}
                     📉 Favorito: {fav} @ {qfav:.2f}
-                    🔗 {link}"
+                    🔗 {link}""")
             invia_messaggio(msg)
 
         driver.close()
