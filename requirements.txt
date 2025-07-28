@@ -2,3 +2,4 @@ Flask
 undetected-chromedriver
 requests
 selenium
+setuptools
