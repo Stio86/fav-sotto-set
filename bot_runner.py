@@ -126,18 +126,12 @@ def run_bot():
         if live_score in ["0-1", "1-0"]:
             perdente = g1 if fav == g1 and live_score == "0-1" else                        g2 if fav == g2 and live_score == "1-0" else None
             if perdente == fav:
-                msg = (
-                    f"🚨 FAVORITO IN DIFFICOLTÀ
-
-"
-                    f"📌 Torneo: {tipo} - {nome_t}
-"
-                    f"👤 Match: {g1} vs {g2}
-"
-                    f"🎯 Favorito: {fav} (quota {qfav})
-"
-                    f"🟠 Sta perdendo il 1º set ({live_score})
-"
+                msg = (f"🚨 FAVORITO IN DIFFICOLTÀ"
+                       
+                    f"📌 Torneo: {tipo} - {nome_t}"
+                    f"👤 Match: {g1} vs {g2}"
+                    f"🎯 Favorito: {fav} (quota {qfav})"
+                    f"🟠 Sta perdendo il 1º set ({live_score})"
                     f"🔗 {link}"
                 )
                 send_telegram_message(msg)
